@@ -53,6 +53,9 @@ interface entry {
 
 function sort(schema: schema, gitignoreContents: string): string {
 
+	const arr = gitignoreContents.split('\n')
+	return arr.sort().filter(el => el && !el.startsWith('#')).join('\n')
+
 	// const customCategories: categories = {}
 	// const categories: categories = {}
 
@@ -123,9 +126,9 @@ function sort(schema: schema, gitignoreContents: string): string {
 export async function sortGitignore() {
 	const [ schema, gitignoreContents ] = await Promise.all([
 		fs.readJson(path.join(_dirname, './schema.json')),
-		Deno.readTextFile('./.gitignore')
+		Deno.readTextFile('.gitignore')
 	]) as [ schema, string ]
 
 	const newGitignoreContents = await sort(schema, gitignoreContents)
-	await Deno.writeTextFile('./test.gitignore', newGitignoreContents)
+	await Deno.writeTextFile('.gitignore', newGitignoreContents)
 }
