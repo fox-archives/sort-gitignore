@@ -1,0 +1,62 @@
+{
+	"dependencies": {
+		"files": [
+			"Cargo.lock",
+			"downloads",
+			"jspm_packages",
+			"node_modules",
+			"web_modules",
+			".yarn",
+			".pnp.js"
+		]
+	},
+	"coverage": {
+		"files": [
+			"coverage",
+			".nyc_output"
+		]
+	},
+	"env": {
+		"files": [
+			"env",
+			"venv"
+		]
+	},
+	"build": {
+		"files": [
+			"build",
+			"dist",
+			"next",
+			"nuxt",
+			"out"
+		]
+	},
+	"logs": {
+		"files": [
+			"log"
+		]
+	},
+	"cache": {
+		"files": [
+			"cache",
+			"dynamodb",
+			"fusebox",
+			"npm",
+			"tsbuildinfo"
+		]
+	},
+	"binaries": {
+		"files": [
+			"bin",
+			".class",
+			".dll",
+			".dylib",
+			".exe",
+			".o",
+			".out",
+			".sm",
+			".so",
+			".test"
+		]
+	}
+}
